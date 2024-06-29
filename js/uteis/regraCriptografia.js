@@ -1,4 +1,4 @@
-export default conversor;
+export {conversor};
 const conversor = new Map();
 conversor.set("e", "enter")
     .set("i", "imes")

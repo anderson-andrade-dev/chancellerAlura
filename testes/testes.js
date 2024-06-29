@@ -16,20 +16,39 @@ var textoSemAcentoMinuscula = function (palavra) {
     return palavra;
 }
 
+let pegarValorDoInputPeloId = function (id) {
+    texto = document.getElementById(id).value
+    return texto;
+}
+
+let insereValorInputPeloId = function (id, texto) {
+    valorInput = document.getElementById(id);
+    valorInput.value = texto;
+}
+
+let limparImputPeloId = function (id) {
+    document.getElementById(id).value = "";
+}
+
+let controlC = function (id) {
+    let textoCopiado = document.getElementById(id).value;
+    navigator.clipboard
+        .writeText(textoCopiado)
+        .then(() => {
+            console.log('Texto Copiado Com Sucesso!')
+        })
+        .catch(() => {
+            alert("Erro ao copiar texto!");
+        });
+}
+
 let criptografiaPassando = function (texto, conversor) {
     texto = textoSemAcentoMinuscula(texto);
     let textoCriptografado = "";
-
-    for (let index = 0; index < texto.length; index++) {
-        if (conversor.get(texto[index]) === undefined) {
-            textoCriptografado = textoCriptografado.concat(texto[index])
-        } else {
-            textoCriptografado = textoCriptografado.concat(conversor.get(texto[index]))
-        }
-    }
-
-    return textoCriptografado
-
+    conversor.forEach((value, key) => {
+        textoCriptografado = textoCriptografado.replace(key, value);
+    });
+    return textoCriptografado;
 }
 
 let descriptografia = function (texto, conversor) {
@@ -47,6 +66,7 @@ let descriptografia = function (texto, conversor) {
 
     return texto;
 }
+
 
 
 let testCriptografiaPassandoTexto = function () {
