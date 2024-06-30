@@ -1,28 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="css/style.css">
     <script src="./js/app.js" type="module"></script>
-
 </head>
 
 <body>
-    <div>
-        <input type="text" id="in_valor_a_criptografar">
-        <button id="bt_criptografar">Criptografar</button>
+
+    <div class="principal">
+        <header>
+            <img src="image/logo.png" alt="logo da Alura">
+        </header>
+
+        <main>
+            <div class="txArea">
+                <textarea name="" id="in_valor_a_criptografar" rows="15" placeholder="Digite Seu Texto."></textarea>
+                <p class="textoAviso"><img src="image/bi_exclamation-circle-fill.png" alt="">Apenas letras minúsculas
+                    sem acento.</p>
+                <div class="btGrupo">
+                    <button class="btCriptografar" id="bt_criptografar">Criptografar</button>
+                    <button class="btDescriptografar" id="bt_descriptografar">Descriptografar</button>
+                </div>
+            </div>
+            <div class="rectangle">
+              
+                    <img class='imagem' id="imagemUsuario" src="image/menino.svg" alt="">
+    
+                    <h2 class="subTituloCaixa" id="messagemUsurario">Nenhuma mensagem encontrada</h2>
+               
+                    <p class="textoCaixa" id="texto_criptografado_usuario">Digite um texto que você deseja criptografar
+                        ou
+                        descriptografar.</p>
+      
+                    <button class="btCopiarColar" id="bt_control_c" hidden="true">Copiar</button>
+            </div>
+        </main>
     </div>
-    <div>
-        <input type="text" id="in_inserir_valor">
-        <button id=bt_control_c>controlC</button>
-    </div>
-    <div>
-        <input type="text" id="in_valor_descriptografado">
-        <button id="bt_descriptografar">Desptografar</button>
-    </div>
+    <footer>
+        <p>Desenvolvido Por Anderson Andrade Dev</p>
+    </footer>
 </body>
 
 </html>
