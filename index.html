@@ -1,47 +1,54 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="./js/app.js" type="module"></script>
+    <link rel="stylesheet" href="/css/style1.css">
 </head>
 
 <body>
+    <header></header>
+    <main class="main">
 
-    <div class="principal">
-        <header>
-            <img src="image/logo.png" alt="logo da Alura">
-        </header>
+        <section class="secao_principal">
 
-        <main>
-            <div class="txArea">
-                <textarea name="" id="in_valor_a_criptografar" rows="15" placeholder="Digite Seu Texto."></textarea>
-                <p class="textoAviso"><img src="image/bi_exclamation-circle-fill.png" alt="">Apenas letras minúsculas
-                    sem acento.</p>
-                <div class="btGrupo">
-                    <button class="btCriptografar" id="bt_criptografar">Criptografar</button>
-                    <button class="btDescriptografar" id="bt_descriptografar">Descriptografar</button>
+            <img class="imagem_alura" src="image/logo.png" alt="">
+            <div class="secao_area_criptografar">
+                <textarea name="" id="in_valor_a_criptografar" rows="10" placeholder="Digite Seu Texto." required="true"
+                    autofocus="true"></textarea>
+                <p class="textoAviso">
+                    <img src="image/bi_exclamation-circle-fill.png" alt="">
+                    Apenas letras minúsculas sem acento.
+                </p>
+                <div class="botoes_criptografar_descriptografar">
+                    <button id="bt_criptografar">Criptografar</button>
+                    <button id="bt_descriptografar">Descriptografar</button>
                 </div>
             </div>
-            <div class="rectangle">
-              
-                    <img class='imagem' id="imagemUsuario" src="image/menino.svg" alt="">
-    
-                    <h2 class="subTituloCaixa" id="messagemUsurario">Nenhuma mensagem encontrada</h2>
-               
-                    <p class="textoCaixa" id="texto_criptografado_usuario">Digite um texto que você deseja criptografar
-                        ou
-                        descriptografar.</p>
-      
-                    <button class="btCopiarColar" id="bt_control_c" hidden="true">Copiar</button>
+        </section>
+        <section class="secao_secundario">
+            <div class="texto_retorno_usuario">
+                <textarea name="" id="in_valor_a_criptografar" rows="7" readonly="true"></textarea>
             </div>
-        </main>
-    </div>
+            <div class="imagem_usuario">
+                <img src="image/menino.svg" alt="">
+            </div>
+            <div class="texto_mensagem_usuario">
+                <h2 id="titulo_mesagem">Nenhuma mensagem encontrada</h2>
+                <p id="mesagem">
+                    Digite um texto que você deseja criptografar ou
+                    descriptografar.
+                </p>
+            </div>
+            <div class="botao_copiar">
+                <button id="bt_control_c">Copiar</button>
+            </div>
+        </section>
+    </main>
     <footer>
-        <p>Desenvolvido Por Anderson Andrade Dev</p>
+        <p>Desenvolvido Anderson Andrade Dev</p>
     </footer>
 </body>
 
