@@ -87,6 +87,7 @@ body {
     background-color: var(--cor-fundo-retangulo);
     margin-top: 2%;
     margin-right: 2%;
+    gap: 2%
 }
 
 .secao_secundario textarea {
@@ -108,18 +109,29 @@ body {
 
 .texto_retorno_usuario {
     text-align: center;
-    height: 40%;
+    height: 30%;
     width: 100%;
     margin: 2%;
 }
 
 .imagem_usuario {
-    height: 30%;
+    width: 90%;
+    padding: 2%;
+}
+
+.imagem_usuario img{
+    width: 100%;
 }
 
 .texto_mensagem_usuario {
-    height: 20%;
-    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    height: 30%;
+    width: 90%;
+    padding: 2%;
+    
 }
 
 .texto_mensagem_usuario h2 {
@@ -142,9 +154,11 @@ body {
 .botao_copiar {
     display: flex;
     height: 10%;
-    margin: 2% 0% 3% 0%;
-    padding: 2%;
+    width: 90%;
     align-items: end;
+    text-align: center;
+    padding: 2%;
+    margin: 5% 0% 3% 0%;
 }
 
 .imagem_alura {
@@ -169,14 +183,16 @@ body {
 }
 
 .botao_copiar button {
-    width: 336px;
+    width: 100%;
     height: 63px;
-    border-radius: 24px;
+    border-radius: 1.5rem;
     border: 1px, solid, var(--cor-segundaria);
     background-color: var(--cor-fundo-retangulo);
     font-size: 1rem;
     color: var(--cor-segundaria);
-    margin: 1.5% 1.5%;
+    margin: 1.5%;
+    text-align: center;
+    padding: 2%;
 }
 
 button:hover {
@@ -193,4 +209,12 @@ button:hover {
     color: var(--cor-terciaria);
     text-align: start;
     padding: 1.5%;
+}
+
+footer {
+    padding: 2%;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: 'Inter', sans-serif;
 }
